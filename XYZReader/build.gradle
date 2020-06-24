@@ -13,7 +13,7 @@ android {
     compileSdkVersion 29
 
     defaultConfig {
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 29
     }
 }
@@ -27,4 +27,5 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.squareup.okhttp3:okhttp:4.7.2'
     implementation files('libs/volley.jar')
+    implementation 'com.google.android.material:material:1.1.0'
 }

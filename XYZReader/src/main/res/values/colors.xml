@@ -16,6 +16,15 @@
 -->
 
 <resources>
+
+    <color name="colorPrimary">#E91E63</color>
+    <color name="colorPrimaryDark">#C2185B</color>
+    <color name="colorAccent">#4CAF50</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorSecondaryText">#757575</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="colorPrimaryLight">#F8BBD0</color>
+    <color name="colorIcons">#FFFFFF</color>
     <color name="photo_placeholder">#ccc</color>
 
     <color name="theme_primary">#04561A</color>
