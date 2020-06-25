@@ -6,6 +6,7 @@ import android.os.Build;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
@@ -38,8 +39,8 @@ public class ArticleDetailActivity extends AppCompatActivity
 
     private ViewPager mPager;
     private MyPagerAdapter mPagerAdapter;
-    private View mUpButtonContainer;
-    private View mUpButton;
+//    private View mUpButtonContainer;
+//    private View mUpButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +51,15 @@ public class ArticleDetailActivity extends AppCompatActivity
                             View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
         }
         setContentView(R.layout.activity_article_detail);
+
+        // Set up toolbar
+        Toolbar articleDetailToolbar = findViewById(R.id.article_detail_toolbar);
+        articleDetailToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ArticleDetailActivity.super.onBackPressed();
+            }
+        });
 
         getSupportLoaderManager().initLoader(0, null, this);
 
@@ -64,9 +74,9 @@ public class ArticleDetailActivity extends AppCompatActivity
             @Override
             public void onPageScrollStateChanged(int state) {
                 super.onPageScrollStateChanged(state);
-                mUpButton.animate()
+                /*mUpButton.animate()
                         .alpha((state == ViewPager.SCROLL_STATE_IDLE) ? 1f : 0f)
-                        .setDuration(300);
+                        .setDuration(300);*/
             }
 
             @Override
@@ -79,10 +89,10 @@ public class ArticleDetailActivity extends AppCompatActivity
             }
         });
 
-        mUpButtonContainer = findViewById(R.id.up_container);
+        //mUpButtonContainer = findViewById(R.id.up_container);
 
-        mUpButton = findViewById(R.id.action_up);
-        mUpButton.setOnClickListener(new View.OnClickListener() {
+        //mUpButton = findViewById(R.id.action_up);
+        /*mUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onSupportNavigateUp();
@@ -101,7 +111,7 @@ public class ArticleDetailActivity extends AppCompatActivity
                 }
             });
         }
-
+*/
         if (savedInstanceState == null) {
             if (getIntent() != null && getIntent().getData() != null) {
                 mStartId = ItemsContract.Items.getItemId(getIntent().getData());
@@ -151,8 +161,8 @@ public class ArticleDetailActivity extends AppCompatActivity
     }
 
     private void updateUpButtonPosition() {
-        int upButtonNormalBottom = mTopInset + mUpButton.getHeight();
-        mUpButton.setTranslationY(Math.min(mSelectedItemUpButtonFloor - upButtonNormalBottom, 0));
+//        int upButtonNormalBottom = mTopInset + mUpButton.getHeight();
+//        mUpButton.setTranslationY(Math.min(mSelectedItemUpButtonFloor - upButtonNormalBottom, 0));
     }
 
     private class MyPagerAdapter extends FragmentStatePagerAdapter {

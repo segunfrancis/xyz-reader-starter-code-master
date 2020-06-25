@@ -20,11 +20,10 @@
             android:paddingBottom="28dp" />
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
-    <FrameLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/toolbar_container"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?colorPrimary"
         android:elevation="8dp">
 
         <androidx.appcompat.widget.Toolbar
@@ -43,6 +42,6 @@
                 android:contentDescription="@string/app_name" />
 
         </androidx.appcompat.widget.Toolbar>
-    </FrameLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
