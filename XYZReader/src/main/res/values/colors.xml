@@ -25,7 +25,8 @@
     <color name="colorDivider">#BDBDBD</color>
     <color name="colorPrimaryLight">#F8BBD0</color>
     <color name="colorIcons">#FFFFFF</color>
-    <color name="photo_placeholder">#ccc</color>
+    <color name="photo_placeholder">#CCC</color>
+    <color name="colorWhite">#FFFFFF</color>
 
     <color name="theme_primary">#04561A</color>
     <color name="theme_primary_dark">#04561A</color>

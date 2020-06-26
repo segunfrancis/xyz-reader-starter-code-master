@@ -6,4 +6,6 @@
 
     <!-- detail -->
     <dimen name="detail_card_max_width">704dp</dimen>
+
+    <integer name="scroll_value">400</integer>
 </resources>

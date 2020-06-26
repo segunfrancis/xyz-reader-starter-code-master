@@ -8,4 +8,6 @@
     <dimen name="detail_body_bottom_margin">96dp</dimen>
 
     <integer name="card_item_max_lines">2</integer>
+
+    <integer name="scroll_value">500</integer>
 </resources>
